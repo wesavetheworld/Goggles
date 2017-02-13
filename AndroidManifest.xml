@@ -2,14 +2,45 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kit.extend.shady"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="8" />
+        android:minSdkVersion="9"
+        android:targetSdkVersion="24" />
+
+
+    <!-- 窗口蒙板 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
 
     <application
-        android:allowBackup="true">
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/shady_title">
+        <activity
+            android:name="com.kit.shade.ShadyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/shady_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeDialogTransparency">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="com.zhao.withu.action.goggles.SETTING" />
+                <!--<data android:scheme="goggles" />-->
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- 护目镜开始 -->
+        <service
+            android:name="com.kit.shade.ShadyService"
+            android:exported="false" />
+        <!-- 护目镜End -->
     </application>
 
 </manifest>

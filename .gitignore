@@ -21,7 +21,7 @@ local.properties
 .classpath
 .project
 .settings/*
-proguard-project.txt
+proguard-project.pro
 
 # IntelliJ project files
 *.iws
@@ -41,3 +41,6 @@ build
 ant.properties
 build.xml
 META-INF
+/.settings/
+/Zhao
+/build.gradle.real

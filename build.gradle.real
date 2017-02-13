@@ -79,10 +79,7 @@ android {
 
         release {
             signingConfig signingConfigs.release
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.pro'
-
-
-
+            proguardFiles getDefaultProguardFile('proguard-project.txt'), 'proguard-project.txt'
 //            runProguard true
             minifyEnabled true
 
@@ -98,9 +95,7 @@ android {
 
         debug {
             signingConfig signingConfigs.debug
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.pro'
-
-
+            proguardFiles getDefaultProguardFile('proguard-debug.txt'), 'proguard-debug.txt'
 //            runProguard false
             minifyEnabled false
 
