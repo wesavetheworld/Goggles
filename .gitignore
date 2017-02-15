@@ -21,13 +21,14 @@ local.properties
 .classpath
 .project
 .settings/*
-proguard-project.pro
+proguard-project.txt
 
 # IntelliJ project files
 *.iws
 *.iml
 *.ipr
 .idea/
+.svn/
 
 # Gradle files
 .gradle
@@ -35,12 +36,9 @@ gradle
 build
 
 # Mac system files
-.DS_Store
+.DS_Store/
 
 # others
 ant.properties
 build.xml
 META-INF
-/.settings/
-/Zhao
-/build.gradle.real
